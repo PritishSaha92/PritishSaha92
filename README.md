@@ -22,7 +22,7 @@ Here are some ideas to get you started:
 
 -->
 - 🔭 I’m currently working on <b>ML & DeFi Projects</b>
-- 🌱 I’m currently learning <b>Machine Learning Algorithms, Decentralized Finance, Neural Networks and Image Processing</b>
+- 🌱 I’m currently learning <b>Reinforcement Learning, Decentralized Finance, Neural Networks and Federated Learning</b>
 - 👯 I’m looking to collaborate on <b>New Projects</b>
 - 🤔 I’m looking for help with <b>Deep Learning, Advanced ML Algorithms, Neural Networks, Blockchain Architectures</b>
 - 💬 Ask me about <b>Finance</b>
