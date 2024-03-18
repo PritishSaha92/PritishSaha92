@@ -21,10 +21,10 @@ Here are some ideas to get you started:
 ![output-onlinegiftools4](https://github.com/Pritish-Saha/Pritish-Saha/assets/85983760/dc9f7e0a-8372-4449-87c9-73f488def253)
 
 -->
-- 🔭 I’m currently working on <b>ML & DeFi Projects</b>
-- 🌱 I’m currently learning <b>Reinforcement Learning, Decentralized Finance, Neural Networks and Federated Learning</b>
+- 🔭 I’m currently working on <b>Deep Learning & Robotics Projects</b>
+- 🌱 I’m currently learning <b>Reinforcement Learning, Decentralised Finance, Robotics, Quantitative Trading & Deep Learning</b>
 - 👯 I’m looking to collaborate on <b>New Projects</b>
-- 🤔 I’m looking for help with <b>Deep Learning, Advanced ML Algorithms, Neural Networks, Blockchain Architectures</b>
+- 🤔 I’m looking for help with <b>Robotics, Advanced DL Algorithms, Quantitative Trading & Blockchain Architectures</b>
 - 💬 Ask me about <b>Finance</b>
 - 📫 How to reach me: <b>pritish171@gmail.com</b>
 - ⚡ I'm Interested in:<br>
