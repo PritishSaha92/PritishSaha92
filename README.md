@@ -22,10 +22,10 @@ Here are some ideas to get you started:
 
 -->
 - 🔭 I’m currently working on <b>Deep Learning & Robotics Projects</b>
-- 🌱 I’m currently learning <b>Reinforcement Learning, Decentralised Finance, Robotics, Quantitative Trading & Deep Learning</b>
+- 🌱 I’m currently learning <b>Reinforcement Learning, Computer Vision & Natural Language Processing</b>
 - 👯 I’m looking to collaborate on <b>New Projects</b>
 - 🤔 I’m looking for help with <b>Robotics, Advanced DL Algorithms, Quantitative Trading & Blockchain Architectures</b>
-- 💬 Ask me about <b>Finance</b>
+- 💬 Ask me about <b>Decentralized Finance</b>
 - 📫 How to reach me: <b>pritish171@gmail.com</b>
 - ⚡ I'm Interested in:<br>
   &emsp;&emsp;<b>🌏Geopolitics<br>
