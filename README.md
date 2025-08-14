@@ -3,7 +3,7 @@
 
 <img align = 'right' src = 'https://github-production-user-asset-6210df.s3.amazonaws.com/85983760/250222453-dc9f7e0a-8372-4449-87c9-73f488def253.gif' width = '400' height = '580'>
 
-<br>&emsp;[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hey👋,+I'm+Pritish+Saha;3rd+yr+UG+Student+at+IIT+Kharagpur;Pursuing+Manufacturing+Engineering;Currently+Learning;Image+Processing,+ML,+AI)](https://git.io/typing-svg)
+<br>&emsp;[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hey👋,+I'm+Pritish+Saha;4th+yr+UG+Student+at+IIT+Kharagpur;Pursuing+Manufacturing+Engineering;Currently+Learning;Image+Processing,+ML,+AI)](https://git.io/typing-svg)
 <!--
 **Pritish-Saha/Pritish-Saha** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
