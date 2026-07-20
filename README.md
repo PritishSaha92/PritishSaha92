@@ -1,76 +1,79 @@
 # Pritish Saha
 
-4th-year Dual Degree student in Manufacturing Science and Engineering at **IIT Kharagpur**. I work on LLMs, reinforcement learning, and representation-level supervision: how models infer hidden state, adapt without drifting, use memory, and remain monitorable under optimization pressure.
+Final-year student at **IIT Kharagpur** working on reinforcement learning for reasoning, learned state representations, mechanistic supervision, efficient adaptation, and memory in neural systems.
 
-[Email](mailto:pritish171@gmail.com) / [LinkedIn](https://www.linkedin.com/in/pritish-saha-436a1922a/) / [Google Scholar](https://scholar.google.com/citations?user=gmXhzpMAAAAJ&hl=en) / [Hugging Face](https://huggingface.co/Pritish92)
+[Email](mailto:pritish171@gmail.com) / [LinkedIn](https://www.linkedin.com/in/pritish-saha-436a1922a/) / [Google Scholar](https://scholar.google.com/citations?user=gmXhzpMAAAAJ&hl=en) / [Hugging Face](https://huggingface.co/Pritish92) / [CV](https://github.com/PritishSaha92/PritishSaha/blob/main/data/Pritish_CV.pdf)
 
 ## Research taste
 
-I am interested in the gap between surface behavior and internal computation. A model can pass an evaluation while using the wrong trajectory, exploiting a brittle shortcut, or hiding the state we actually care about. Most of my work tries to make that internal structure measurable or trainable: belief-state probing, latent trajectory alignment, curvature-aware adaptation, and learned memory.
+I study how agents turn experience into reusable internal structure. The question I keep returning to is whether a model that reaches the right answer learned a robust internal strategy or a shortcut that happened to work. I like problems where behavior, representation, and causal interventions have to tell the same story.
 
 Current themes:
 
-- Reinforcement learning for reasoning models, especially outcome-only RL failures and latent/process-level supervision.
-- Representation learning for hidden state, belief geometry, state abstractions, and useful downstream features.
-- Efficient LLM adaptation with PEFT, natural-gradient style updates, Fisher structure, and forgetting control.
-- Memory-augmented transformers and multimodal/agentic systems that use limited feedback well.
+- Reinforcement learning for reasoning, especially the limits of outcome-only rewards and opportunities for latent or process-level supervision.
+- Bayesian belief states, coarse-graining, state abstractions, and mechanistic analysis of learned representations.
+- Efficient LLM adaptation through PEFT, Fisher geometry, natural-gradient-style updates, and forgetting control.
+- Learned memory and interactive agents that acquire transferable structure from limited feedback.
 
-## Selected work
+## Selected research
 
-### LaViDA: latent supervision for math RL
+### LaViDA: latent supervision for mathematical reasoning
 
-My BTP / undergraduate thesis work studies whether outcome-only GRPO leaves useful reasoning structure on the table. LaViDA adds a reward-gated latent alignment signal: correct rollouts are projected through a frozen encoder and pulled toward verified expert reasoning traces.
+My BTP at the **Complex Networks Research Lab, IIT Kharagpur**, supervised by Prof. Pawan Goyal, asks whether outcome-only GRPO leaves useful reasoning structure on the table. LaViDA supplements verified rewards with representation-level alignment toward expert reasoning traces.
 
-What I found so far:
+- Built a Qwen2.5-Math-7B GRPO pipeline with LoRA-r64, vLLM, FlashAttention, self-distilled traces, and a filtered Oracle-augmented pool from Qwen2.5-Math-72B-Instruct.
+- Compared GRPO, chi-square LaViDA, nearest-expert alignment, self-only attribution, and SFT under leakage-aware evaluation.
+- Nearest-expert alignment tied GRPO on greedy MATH-500 and improved `n=8` mean correctness by `+4.70pp` (`p=0.0069`); the harder L4-5 subset improved by `+5.77pp` (`p=0.0429`).
+- The learned chi-square critic was null, motivating CR-LaViDA: a prompt-exclusive contrastive reformulation rather than density-ratio matching.
 
-- Built a controlled Qwen2.5-Math-7B pipeline with LoRA-r64 GRPO, self-distilled expert traces, and an Oracle-augmented pool from filtered Qwen2.5-Math-72B-Instruct completions embedded on the 7B manifold.
-- Compared GRPO-only, chi-square LaViDA, nearest-expert latent alignment, self-only attribution, and SFT on filtered Oracle traces.
-- Seed-0 result: nearest-expert latent alignment tied GRPO on greedy MATH-500 but improved `n=8` mean correctness by `+4.70pp` over GRPO (`p=0.0069`).
-- The learned chi-square critic was statistically null (`-0.60pp`, `p=0.7051`) with weak training-time alignment (`r~+0.04`), so I am reformulating the auxiliary as CR-LaViDA: a log-space, prompt-exclusive InfoNCE objective rather than density-ratio matching.
+[BTP slides](https://github.com/PritishSaha92/PritishSaha/blob/main/data/BTP2_ppt.pdf)
+
+### Belief-state geometry in transformer ε-transducers
+
+Research Fellow in **[MARS 4.0](https://drive.google.com/file/d/1e1NrSwDkh5JacG8v2lmQSzG7bedZAJMd/view?usp=sharing)** at the **Cambridge AI Safety Hub**, supervised by Prof. Fernando Rosas. I study Bayesian belief-state geometry and coarse-graining in transformer ε-transducers.
+
+- Devised hierarchical-HMM and ε-transducer pipelines with exact joint and coarse-grained Bayesian belief operators.
+- Probed 4-layer causal transformers and linearly decoded input and transducer beliefs at `R² ≈ 0.99`, with next-token loss at the computed entropy-rate floor.
+- Found that coarse-graining hides roughly `93%` of the fully observable input belief while preserving most transducer belief.
+- Used shuffle, untrained, sequence-level cross-validation, and temporal controls to distinguish learned geometry from probe leakage.
 
 ### GRIT: geometry-aware PEFT
 
-First author of **[GRIT](https://arxiv.org/abs/2601.00231)**, a curvature-aware LoRA/PEFT method using rank-space K-FAC preconditioning, Fisher-guided reprojection, and dynamic rank adaptation.
+First author of **[GRIT](https://arxiv.org/abs/2601.00231)**, developed at **RAAPID INC** with Prof. Amitava Das. GRIT treats adapter updates as a geometric object using rank-space K-FAC, Fisher-guided reprojection, dynamic rank adaptation, and guarded high-rank-to-low-rank compression.
 
-- Built the framework from scratch for LLM adaptation under parameter and forgetting constraints.
-- Implemented fused Triton kernels for covariance accumulation and GPU-side Cholesky-heavy natural-gradient updates.
-- GRIT matches or improves LoRA/QLoRA-style baselines while reducing trainable parameters by `25-80%` across tasks.
+- Built the framework for LLM adaptation under parameter and forgetting constraints.
+- Implemented fused Triton kernels for covariance fusion, GPU-side Cholesky inversion, and batched preconditioning.
+- Built a dual-stream CUDA pipeline that overlaps stale-by-one curvature work with the next training step.
+- Targets competitive generative and NLU performance while reducing trainable parameters by `25-80%`.
 
 ### Mixture of Chapters: learned memory in transformers
 
 Co-author of **[Mixture of Chapters](https://arxiv.org/abs/2603.21096)**, accepted at the **ICLR 2026 New Frontiers in Associative Memory Workshop**. [OpenReview](https://openreview.net/forum?id=uwnwGYICWe) / [Code](https://github.com/Tasmay-Tibrewal/Memory)
 
 - Added sparse learned memory banks queried by transformer layers through cross-attention.
-- Used MoE-style chapter routing to scale to `262K` learned memory tokens without dense memory attention.
-- Improved iso-FLOP pretraining loss and reduced forgetting during instruction fine-tuning.
+- Used chapter routing to scale to `262K` learned memory tokens without dense memory access.
+- Improved iso-FLOP pretraining loss and retention during instruction fine-tuning.
 
-### Bayesian latent-state probing in transformers
+## Applied systems and competitions
 
-Research Fellow at **Cambridge AI Safety Hub**, working on Bayesian mixed-state geometry and multi-timescale latent inference in transformers.
+### Fraud-graph systems at Axis Bank
 
-- Built hierarchical HMM/transducer pipelines with slow hidden drivers, fast dynamics, and exact 6-state Bayesian filters.
-- Probed 4-layer causal transformers and linearly decoded the full 6D Bayesian posterior from the residual stream (`R^2=0.982`, `MSE=0.0043`).
-- Ran shuffle, untrained, temporal, and layerwise controls to test whether the model is actually tracking hidden state rather than surface statistics.
+As a Data Science Intern in the **Axis Bank Business Intelligence Unit** (May-July 2026), I built a leakage-free temporal graph pipeline for explainable loan-onboarding fraud review.
 
-### Medical LLM safety and antidistillation
+- Processed `224.8M` accounts and `1.31B` transfers with PySpark, Hadoop, and HDFS checkpointing.
+- Cast fraud proximity as bidirectional, three-hop, time-respecting BFS and reduced the working graph by roughly `20x` while retaining about `80%` applicant coverage.
+- Implemented camouflage-aware dense-subgraph signals and delivered a LOAO-validated review queue; the closest band reached roughly `81x` the portfolio fraud rate, while a separate scorecard indicated a feature rather than model ceiling.
 
-At **RAAPID INC**, I also work on medical LLM safety and decoding-time defenses.
+[Final presentation](https://drive.google.com/file/d/1sOSdI06d-h-Mi6OKhAklsaRF8sPu17tN/view?usp=sharing)
 
-- Benchmarked MedGemma on CARES-18K and observed `86%` attack success under unsafe prompt settings.
-- Built token-level decoding machinery for FROST-style antidistillation experiments.
-- The broader question is whether safety supervision changes internal computation or only trains a shallow output wrapper.
-
-## Projects and competitions
-
-- **General Championship Data Analytics, IIT Kharagpur - Runner-up:** led a GenAI analytics dashboard for Frammer AI with LangGraph, self-healing SQL, NLQ-driven KPI analysis, and Gaussian-anchored synthetic star-schema evaluation.
-- **[Amazon ML Challenge 2025](https://github.com/PritishSaha92/Amazon-ML-25):** stacked Qwen2.5-VL-3B SFT with LightGBM over CLIP/text features; used offline tensorization, WebDataset, 4-bit QLoRA, Pseudo-Huber loss, and monotonic constraints; reached `40.8` SMAPE.
-- **American Express Campus Challenge - National Finalist:** built a 3-stage GBDT-Transformer ranking ensemble with `3k+` leakage-free temporal features and a Transformer trained on GBDT residuals; final MAP `0.59`.
+- **General Championship Data Analytics, IIT Kharagpur — Runner-up:** led a GenAI analytics dashboard for Frammer AI with LangGraph, self-healing SQL, NLQ-driven KPI analysis, and synthetic star-schema evaluation. [Presentation](https://drive.google.com/file/d/1VRiHxlmjm4wJ9ezu4tE9BwB5iGUvbngH/view?usp=sharing)
+- **[Amazon ML Challenge 2025](https://github.com/PritishSaha92/Amazon-ML-25):** stacked Qwen2.5-VL-3B SFT with LightGBM over CLIP and text features; used WebDataset, 4-bit QLoRA, Pseudo-Huber loss, and monotonic constraints; reached `40.8` SMAPE.
+- **[American Express Campus Challenge](https://github.com/PritishSaha92/AmEX-Spacebar-Sketchers-2025) — National Finalist:** built a three-stage GBDT-Transformer ranking ensemble with `3k+` leakage-free temporal features and a listwise Transformer trained on GBDT residuals; final MAP `0.59`.
 
 ## Tools I use
 
-`Python`, `C/C++`, `CUDA`, `Triton`, `PyTorch`, `JAX`, `Transformers`, `PEFT/LoRA`, `TRL`, `vLLM`, `FlashAttention-2`, `bitsandbytes`, `Penzai`, `FastAPI`, `Docker`, `Linux`, `WebDataset`, `LangGraph`, `ChromaDB`, `Git`.
+`Python`, `C/C++`, `PyTorch`, `JAX`, `CUDA`, `Triton`, `Penzai`, `Transformers`, `PEFT/LoRA`, `TRL`, `vLLM`, `FlashAttention-2`, `bitsandbytes`, `PySpark`, `Spark SQL`, `Hadoop/HDFS`, `Impala`, `GraphFrames`, `FastAPI`, `Docker`, `Linux`, `WebDataset`, `LangGraph`, `ChromaDB`, `Git`.
 
 ## What I am looking for
 
-I am most excited by work where behavior, representation, and causality all have to line up. In practice that means RL for reasoning, mechanistic supervision, latent-state interpretability, efficient adaptation, and agents that learn useful abstractions from limited interaction.
-
+I am most excited by research on RL for reasoning, mechanistic supervision, latent-state interpretability, efficient adaptation, learned memory, and agents that acquire useful abstractions through interaction.
