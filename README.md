@@ -1,6 +1,6 @@
 # Pritish Saha
 
-Final-year student at **IIT Kharagpur** working on reinforcement learning for reasoning, learned state representations, mechanistic supervision, efficient adaptation, and memory in neural systems.
+Final-year student at **IIT Kharagpur** working on reinforcement learning for reasoning, state representation and credit assignment, mechanistic supervision, efficient adaptation, and learned memory.
 
 [Email](mailto:pritish171@gmail.com) / [LinkedIn](https://www.linkedin.com/in/pritish-saha-436a1922a/) / [Google Scholar](https://scholar.google.com/citations?user=gmXhzpMAAAAJ&hl=en) / [Hugging Face](https://huggingface.co/Pritish92) / [CV](https://github.com/PritishSaha92/PritishSaha/blob/main/data/Pritish_CV.pdf)
 
@@ -10,7 +10,7 @@ I study how agents turn experience into reusable internal structure. The questio
 
 Current themes:
 
-- Reinforcement learning for reasoning, especially the limits of outcome-only rewards and opportunities for latent or process-level supervision.
+- Reinforcement learning for reasoning, especially the limits of outcome-only rewards and how learned states should support credit assignment.
 - Bayesian belief states, coarse-graining, state abstractions, and mechanistic analysis of learned representations.
 - Efficient LLM adaptation through PEFT, Fisher geometry, natural-gradient-style updates, and forgetting control.
 - Learned memory and interactive agents that acquire transferable structure from limited feedback.
@@ -24,7 +24,7 @@ My BTP at the **Complex Networks Research Lab, IIT Kharagpur**, supervised by Pr
 - Built a Qwen2.5-Math-7B GRPO pipeline with LoRA-r64, vLLM, FlashAttention, self-distilled traces, and a filtered Oracle-augmented pool from Qwen2.5-Math-72B-Instruct.
 - Compared GRPO, chi-square LaViDA, nearest-expert alignment, self-only attribution, and SFT under leakage-aware evaluation.
 - Nearest-expert alignment tied GRPO on greedy MATH-500 and improved `n=8` mean correctness by `+4.70pp` (`p=0.0069`); the harder L4-5 subset improved by `+5.77pp` (`p=0.0429`).
-- The learned chi-square critic was null, motivating CR-LaViDA: a prompt-exclusive contrastive reformulation rather than density-ratio matching.
+- The learned chi-square critic was null, shifting my focus toward how reasoning states should be represented for credit assignment.
 
 [BTP slides](https://github.com/PritishSaha92/PritishSaha/blob/main/data/BTP2_ppt.pdf)
 
@@ -76,4 +76,4 @@ As a Data Science Intern in the **Axis Bank Business Intelligence Unit** (May-Ju
 
 ## What I am looking for
 
-I am most excited by research on RL for reasoning, mechanistic supervision, latent-state interpretability, efficient adaptation, learned memory, and agents that acquire useful abstractions through interaction.
+I am most excited by research on RL for reasoning, state representation and credit assignment, mechanistic supervision, efficient adaptation, learned memory, and agents that acquire useful abstractions through interaction.
