@@ -1,19 +1,19 @@
 # Pritish Saha
 
-Final-year student at **IIT Kharagpur** working on reinforcement learning for reasoning, robust memory and state compression for long-horizon agents, mechanistic supervision, efficient adaptation, and learned state representations.
+Final-year student at **IIT Kharagpur** working across reinforcement learning, predictive-state representations, reasoning-agent memory, representation analysis, and efficient post-training.
 
-[Email](mailto:pritish171@gmail.com) / [LinkedIn](https://www.linkedin.com/in/pritish-saha-436a1922a/) / [Google Scholar](https://scholar.google.com/citations?user=gmXhzpMAAAAJ&hl=en) / [Hugging Face](https://huggingface.co/Pritish92) / [CV](https://github.com/PritishSaha92/PritishSaha/blob/main/data/Pritish_CV.pdf)
+[IIT KGP email](mailto:pritish.saha@kgpian.iitkgp.ac.in) / [Gmail](mailto:pritish171@gmail.com) / [LinkedIn](https://www.linkedin.com/in/pritish-saha-436a1922a/) / [Google Scholar](https://scholar.google.com/citations?user=gmXhzpMAAAAJ&hl=en) / [Hugging Face](https://huggingface.co/Pritish92) / [CV](https://github.com/PritishSaha92/PritishSaha/blob/main/data/Pritish_CV.pdf)
 
-## Research taste
+## Research interests
 
-I study how agents turn experience into reusable internal structure. I am especially interested in whether that structure remains sufficient when the context, task, or policy changes. I like problems where behavior, representation, and causal interventions have to tell the same story.
+I study what an agent must represent or retain so that it can reason, explore, and act reliably as its observations, tasks, or policy change.
 
 Current themes:
 
 - Reinforcement learning for reasoning, especially the limits of outcome-only rewards and opportunities for representation-level supervision.
-- Long-horizon agent memory and state compression that remain reliable as models and policies evolve.
-- Bayesian belief states, coarse-graining, state abstractions, and mechanistic analysis of learned representations.
-- Efficient LLM adaptation through PEFT, Fisher geometry, natural-gradient-style updates, and forgetting control.
+- Predictive-state representations and exploration under partial observability.
+- Reasoning-agent memory and state compression that remain reliable as tasks and policies evolve.
+- Model internals and efficient post-training through representation analysis, PEFT, and Fisher geometry.
 
 ## Selected research
 
@@ -30,21 +30,21 @@ My BTP at the **Complex Networks Research Lab, IIT Kharagpur**, supervised by Pr
 
 ### Belief-state geometry in transformer ε-transducers
 
-Research Fellow in **[MARS 4.0](https://drive.google.com/file/d/1e1NrSwDkh5JacG8v2lmQSzG7bedZAJMd/view?usp=sharing)** at the **Cambridge AI Safety Hub**, supervised by Prof. Fernando Rosas. I study Bayesian belief-state geometry and coarse-graining in transformer ε-transducers.
+**[MARS 4.0 Fellow](https://drive.google.com/file/d/1e1NrSwDkh5JacG8v2lmQSzG7bedZAJMd/view?usp=sharing)** at the **Cambridge AI Safety Hub**, supervised by Prof. Fernando Rosas. I study Bayesian belief-state geometry and coarse-graining in transformer ε-transducers.
 
 - Devised hierarchical-HMM and ε-transducer pipelines with exact joint and coarse-grained Bayesian belief operators.
 - Probed 4-layer causal transformers and linearly decoded input and transducer beliefs at `R² ≈ 0.99`, with next-token loss at the computed entropy-rate floor.
-- Found that coarse-graining hides roughly `93%` of the fully observable input belief while preserving most transducer belief.
+- After coarse-graining, upstream-belief linear recoverability falls from approximately `R² = 0.99` to `0.02–0.05`, while downstream-belief recoverability remains around `R² = 0.89–0.92`.
 - Used shuffle, untrained, sequence-level cross-validation, and temporal controls to distinguish learned geometry from probe leakage.
 
 ### GRIT: geometry-aware PEFT
 
-First author of **[GRIT](https://arxiv.org/abs/2601.00231)**, developed at **RAAPID INC** with Prof. Amitava Das. GRIT treats adapter updates as a geometric object using rank-space K-FAC, Fisher-guided reprojection, dynamic rank adaptation, and guarded high-rank-to-low-rank compression.
+First author of the **[GRIT arXiv preprint](https://arxiv.org/abs/2601.00231)**, developed at **RAAPID INC** with Prof. Amitava Das. GRIT treats adapter updates as a geometric object using rank-space K-FAC, Fisher-guided reprojection, dynamic rank adaptation, and guarded high-rank-to-low-rank compression.
 
 - Built the framework for LLM adaptation under parameter and forgetting constraints.
 - Implemented fused Triton kernels for covariance fusion, GPU-side Cholesky inversion, and batched preconditioning.
 - Built a dual-stream CUDA pipeline that overlaps stale-by-one curvature work with the next training step.
-- Targets competitive generative and NLU performance while reducing trainable parameters by `25-80%`.
+- After Fisher-guided rank selection, projection yields a `26.6–80%` smaller effective active update footprint; training tensors remain allocated at `r_max`.
 
 ### Mixture of Chapters: learned memory in transformers
 
@@ -58,7 +58,7 @@ Co-author of **[Mixture of Chapters](https://arxiv.org/abs/2603.21096)**, accept
 
 ### Fraud-graph systems at Axis Bank
 
-As a Data Science Intern in the **Axis Bank Business Intelligence Unit** (May-July 2026), I built a leakage-free temporal graph pipeline for explainable loan-onboarding fraud review.
+As a Data Science Intern in the **Axis Bank Business Intelligence Unit** (May–July 2026), I built a leakage-free temporal graph pipeline for explainable loan-onboarding fraud review.
 
 - Processed `224.8M` accounts and `1.31B` transfers with PySpark, Hadoop, and HDFS checkpointing.
 - Cast fraud proximity as bidirectional, three-hop, time-respecting BFS and reduced the working graph by roughly `20x` while retaining about `80%` applicant coverage.
@@ -76,4 +76,4 @@ As a Data Science Intern in the **Axis Bank Business Intelligence Unit** (May-Ju
 
 ## What I am looking for
 
-I am most excited by research on RL for reasoning, robust memory for long-horizon agents, learned state representations, mechanistic supervision, efficient adaptation, and agents that remain reliable as their contexts and policies evolve.
+I am interested in research collaborations around reinforcement learning for reasoning, predictive-state representations, exploration under partial observability, reliable long-horizon memory, model internals, and efficient post-training.
