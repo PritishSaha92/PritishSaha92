@@ -1,18 +1,18 @@
 # Pritish Saha
 
-Final-year student at **IIT Kharagpur** working across reinforcement learning, predictive-state representations, reasoning-agent memory, representation analysis, and efficient post-training.
+Final-year student at **IIT Kharagpur** working across reinforcement learning, reasoning, predictive-state representations, agent memory, model internals, and reliable evaluation under policy change.
 
-[IIT KGP email](mailto:pritish.saha@kgpian.iitkgp.ac.in) / [Gmail](mailto:pritish171@gmail.com) / [LinkedIn](https://www.linkedin.com/in/pritish-saha-436a1922a/) / [Google Scholar](https://scholar.google.com/citations?user=gmXhzpMAAAAJ&hl=en) / [Hugging Face](https://huggingface.co/Pritish92) / [CV](https://pritishsaha92.github.io/data/Pritish_CV.pdf)
+[Website](https://pritishsaha92.github.io/) / [IIT KGP email](mailto:pritish.saha@kgpian.iitkgp.ac.in) / [Gmail](mailto:pritish171@gmail.com) / [LinkedIn](https://www.linkedin.com/in/pritish-saha-436a1922a/) / [Google Scholar](https://scholar.google.com/citations?user=gmXhzpMAAAAJ&hl=en) / [Hugging Face](https://huggingface.co/Pritish92) / [CV](https://pritishsaha92.github.io/data/Pritish_CV.pdf)
 
 ## Research interests
 
-I study what an agent must represent or retain so that it can reason, explore, and act reliably as its observations, tasks, or policy change.
+Most of my work asks what a model has actually learned when it succeeds, what its data can really tell us, and how both hold up when the objective or policy changes.
 
 Current themes:
 
 - Reinforcement learning for reasoning, especially the limits of outcome-only rewards and opportunities for representation-level supervision.
-- Predictive-state representations and exploration under partial observability.
-- Reasoning-agent memory and state compression that remain reliable as tasks and policies evolve.
+- Predictive-state representations and agent memory, especially what must be retained for control and transfer under partial observability.
+- Reliable evaluation under adaptive data collection and changing policies.
 - Model internals and efficient post-training through representation analysis, PEFT, and Fisher geometry.
 
 ## Selected research
@@ -24,9 +24,9 @@ My BTP at the **Complex Networks Research Lab, IIT Kharagpur**, supervised by Pr
 - Built a Qwen2.5-Math-7B GRPO pipeline with LoRA-r64, vLLM, FlashAttention, self-distilled traces, and a filtered Oracle-augmented pool from Qwen2.5-Math-72B-Instruct.
 - Compared GRPO, chi-square LaViDA, nearest-expert alignment, self-only attribution, and SFT under leakage-aware evaluation.
 - Nearest-expert alignment tied GRPO on greedy MATH-500 and improved `n=8` mean correctness by `+4.70pp` (`p=0.0069`); the harder L4-5 subset improved by `+5.77pp` (`p=0.0429`).
-- The learned chi-square critic was null, sharpening my interest in representations that remain useful as models and policies change.
+- The learned chi-square critic was null; the simpler nearest-expert signal was the useful result.
 
-[BTP slides](https://github.com/PritishSaha92/PritishSaha/blob/main/data/BTP2_ppt.pdf)
+[BTP slides](https://pritishsaha92.github.io/data/BTP2_ppt.pdf)
 
 ### Belief-state geometry in transformer ε-transducers
 
@@ -76,4 +76,4 @@ As a Data Science Intern in the **Axis Bank Business Intelligence Unit** (May–
 
 ## What I am looking for
 
-I am interested in research collaborations around reinforcement learning for reasoning, predictive-state representations, exploration under partial observability, reliable long-horizon memory, model internals, and efficient post-training.
+I am interested in research collaborations around reinforcement learning for reasoning, predictive-state representations, agent memory, reliable evaluation under changing policies, model internals, and efficient post-training.
