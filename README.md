@@ -39,12 +39,14 @@ My BTP at the **Complex Networks Research Lab, IIT Kharagpur**, supervised by Pr
 
 ### GRIT: geometry-aware PEFT
 
-First author of the **[GRIT arXiv preprint](https://arxiv.org/abs/2601.00231)**, developed at **RAAPID INC** with Prof. Amitava Das. GRIT treats adapter updates as a geometric object using rank-space K-FAC, Fisher-guided reprojection, dynamic rank adaptation, and guarded high-rank-to-low-rank compression.
+Sole first author of the **[GRIT arXiv preprint](https://arxiv.org/abs/2601.00231)**, developed at **RAAPID INC** with Prof. Amitava Das. GRIT treats adapter updates as a geometric object using rank-space K-FAC, Fisher-guided reprojection, dynamic rank adaptation, and guarded high-rank-to-low-rank compression.
 
 - Built the framework for LLM adaptation under parameter and forgetting constraints.
 - Implemented fused Triton kernels for covariance fusion, GPU-side Cholesky inversion, and batched preconditioning.
-- Built a dual-stream CUDA pipeline that overlaps stale-by-one curvature work with the next training step.
-- After Fisher-guided rank selection, projection yields a `26.6–80%` smaller effective active update footprint; training tensors remain allocated at `r_max`.
+- Built asynchronous CUDA streams that overlap K-FAC inversions and eigensolves with training across 60+ LoRA modules.
+- Matched LoRA/QLoRA with `25–80%` lower effective rank and exported a `32%` smaller adapter at `<0.04pp` accuracy loss.
+
+The wider internship also included rebuilding clinical NER evaluation and deterministic QC, reaching `0.640` exact micro-F1 with zero subword fragments across 5,035 rows.
 
 ### Mixture of Chapters: learned memory in transformers
 
