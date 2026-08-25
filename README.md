@@ -28,14 +28,13 @@ My BTP at the **Complex Networks Research Lab, IIT Kharagpur**, supervised by Pr
 
 [BTP slides](https://pritishsaha92.github.io/data/BTP2_ppt.pdf)
 
-### Belief-state geometry in transformer ε-transducers
+### Predictive-state geometry in transformers and RL agents
 
-**[MARS 4.0 Fellow](https://drive.google.com/file/d/1e1NrSwDkh5JacG8v2lmQSzG7bedZAJMd/view?usp=sharing)** at the **Cambridge AI Safety Hub**, supervised by Prof. Fernando Rosas. I study Bayesian belief-state geometry and coarse-graining in transformer ε-transducers.
+**[MARS 4.0 Fellow](https://drive.google.com/file/d/1e1NrSwDkh5JacG8v2lmQSzG7bedZAJMd/view?usp=sharing)** at the **Cambridge AI Safety Hub**, supervised by Prof. Fernando Rosas. Using analytically tractable transducer worlds, I study how models represent Bayesian predictive state and what changes when those representations are adapted for decision-making through reinforcement learning.
 
-- Devised hierarchical-HMM and ε-transducer pipelines with exact joint and coarse-grained Bayesian belief operators.
-- Probed 4-layer causal transformers and linearly decoded input and transducer beliefs at `R² ≈ 0.99`, with next-token loss at the computed entropy-rate floor.
-- After coarse-graining, upstream-belief linear recoverability falls from approximately `R² = 0.99` to `0.02–0.05`, while downstream-belief recoverability remains around `R² = 0.89–0.92`.
-- Used shuffle, untrained, sequence-level cross-validation, and temporal controls to distinguish learned geometry from probe leakage.
+- Built hierarchical-HMM and ε-transducer environments with exact Bayesian filters and predictive geometry.
+- In a passive transformer pilot, decoded the observation-appropriate Bayesian belief well above shuffled and untrained controls, with predictive loss at the entropy-rate floor.
+- Now extending this framework to study which predictive representations remain useful under reward-driven learning and control.
 
 ### GRIT: geometry-aware PEFT
 
