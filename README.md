@@ -73,7 +73,7 @@ As a Data Science Intern in the **Axis Bank Business Intelligence Unit** (May–
 
 ## Tools I use
 
-`Python`, `C/C++`, `PyTorch`, `JAX`, `CUDA`, `Triton`, `Penzai`, `Transformers`, `PEFT/LoRA`, `TRL`, `vLLM`, `FlashAttention-2`, `bitsandbytes`, `PySpark`, `Spark SQL`, `Hadoop/HDFS`, `Impala`, `GraphFrames`, `FastAPI`, `Docker`, `Linux`, `WebDataset`, `LangGraph`, `ChromaDB`, `Git`.
+`Python`, `C/C++`, `PyTorch`, `JAX`, `FSDP/DTensor`, `CUDA`, `Triton`, `Transformers`, `PEFT/LoRA`, `TRL`, `vLLM`, `FlashAttention-2`, `bitsandbytes`, `PySpark`, `Spark SQL`, `Hadoop/HDFS`, `GraphFrames`, `SLURM`, `Docker`, `Linux`, `WebDataset`, `LangGraph`.
 
 ## What I am looking for
 
