@@ -10,31 +10,32 @@ Most of my work asks what a model has actually learned when it succeeds, what it
 
 Current themes:
 
-- Reinforcement learning for reasoning, especially the limits of outcome-only rewards and opportunities for representation-level supervision.
+- Reinforcement learning for reasoning, especially how latent signals can provide useful credit beyond outcome rewards and why predictivity alone may not be enough to change a policy.
 - Predictive-state representations and agent memory, especially what must be retained for control and transfer under partial observability.
 - Reliable evaluation under adaptive data collection and changing policies.
 - Model internals and efficient post-training through representation analysis, PEFT, and Fisher geometry.
 
 ## Selected research
 
-### LaViDA: latent supervision for mathematical reasoning
+### LaViDA: representation-level credit for mathematical reasoning
 
-My BTP at the **Complex Networks Research Lab, IIT Kharagpur**, supervised by Prof. Pawan Goyal, asks whether outcome-only GRPO leaves useful reasoning structure on the table. LaViDA supplements verified rewards with representation-level alignment toward expert reasoning traces.
+My BTP at the **Complex Networks Research Lab, IIT Kharagpur**, supervised by Prof. Pawan Goyal, studies whether latent representations can provide useful credit beyond exact-match rewards in GRPO. The broader question is how a predictive signal becomes a training signal that changes the model's policy.
 
-- Built a Qwen2.5-Math-7B GRPO pipeline with LoRA-r64, vLLM, FlashAttention, self-distilled traces, and a filtered Oracle-augmented pool from Qwen2.5-Math-72B-Instruct.
-- Compared GRPO, chi-square LaViDA, nearest-expert alignment, self-only attribution, and SFT under leakage-aware evaluation.
-- Nearest-expert alignment tied GRPO on greedy MATH-500 and improved `n=8` mean correctness by `+4.70pp` (`p=0.0069`); the harder L4-5 subset improved by `+5.77pp` (`p=0.0429`).
-- The learned chi-square critic was null; the simpler nearest-expert signal was the useful result.
+- Built a Qwen2.5-Math-7B GRPO pipeline with LoRA-r64, vLLM, and FlashAttention on a single H100, using 8,963 self traces and 3,354 filtered Oracle traces.
+- In a seed-0 comparison, the Oracle-augmented nearest-MSE arm improved `n=8` mean correctness by `+4.70pp` over GRPO. Because its reference data and training route also differed, I treat this as an arm-level comparison rather than evidence for the objective alone.
+- The learned chi-square critic showed no detectable lift. This shifted the question from whether a signal predicts success to whether it survives normalization and changes the policy update.
 
 [BTP slides](https://pritishsaha92.github.io/data/BTP2_ppt.pdf)
 
 ### Predictive-state geometry in transformers and RL agents
 
-**[MARS 4.0 Fellow](https://drive.google.com/file/d/1e1NrSwDkh5JacG8v2lmQSzG7bedZAJMd/view?usp=sharing)** at the **Cambridge AI Safety Hub**, supervised by Prof. Fernando Rosas. Using analytically tractable transducer worlds, I study how models represent Bayesian predictive state and what changes when those representations are adapted for decision-making through reinforcement learning.
+**MARS 4.0 Fellow** at the **Cambridge AI Safety Hub**, supervised by Prof. Fernando Rosas. Using analytically tractable transducer worlds, I study how models represent Bayesian predictive state and what changes when those representations are adapted for decision-making through reinforcement learning.
 
 - Built hierarchical-HMM and ε-transducer environments with exact Bayesian filters and predictive geometry.
 - In a passive transformer pilot, decoded the observation-appropriate Bayesian belief well above shuffled and untrained controls, with predictive loss at the entropy-rate floor.
-- Now extending this framework to study which predictive representations remain useful under reward-driven learning and control.
+- Now extending this framework to recurrent control, asking what predictive structure RL preserves and what task-relevant information it makes easier for the policy to access and use.
+
+[Week-one MARS presentation](https://drive.google.com/file/d/1e1NrSwDkh5JacG8v2lmQSzG7bedZAJMd/view?usp=sharing)
 
 ### GRIT: geometry-aware PEFT
 
@@ -75,6 +76,6 @@ As a Data Science Intern in the **Axis Bank Business Intelligence Unit** (May–
 
 `Python`, `C/C++`, `PyTorch`, `JAX`, `FSDP/DTensor`, `CUDA`, `Triton`, `Transformers`, `PEFT/LoRA`, `TRL`, `vLLM`, `FlashAttention-2`, `bitsandbytes`, `PySpark`, `Spark SQL`, `Hadoop/HDFS`, `GraphFrames`, `SLURM`, `Docker`, `Linux`, `WebDataset`, `LangGraph`.
 
-## What I am looking for
+## Get in touch
 
-I am interested in research collaborations around reinforcement learning for reasoning, predictive-state representations, agent memory, reliable evaluation under changing policies, model internals, and efficient post-training.
+I’m always happy to talk about research and am open to collaborations or research-focused roles beginning in 2027. If our interests overlap, please feel free to reach out.
