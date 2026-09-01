@@ -1,6 +1,6 @@
 # Pritish Saha
 
-Final-year student at **IIT Kharagpur** working across reinforcement learning, reasoning, predictive-state representations, agent memory, model internals, and reliable evaluation under policy change.
+Final-year student at **IIT Kharagpur** working across reinforcement learning and reasoning, predictive-state representations and agent memory, model internals, optimization for efficient adaptation, and reliable evaluation under policy change.
 
 [Website](https://pritishsaha92.github.io/) / [IIT KGP email](mailto:pritish.saha@kgpian.iitkgp.ac.in) / [Gmail](mailto:pritish171@gmail.com) / [LinkedIn](https://www.linkedin.com/in/pritish-saha-436a1922a/) / [Google Scholar](https://scholar.google.com/citations?user=gmXhzpMAAAAJ&hl=en) / [Hugging Face](https://huggingface.co/Pritish92) / [CV](https://pritishsaha92.github.io/data/Pritish_CV.pdf)
 
@@ -13,7 +13,7 @@ Current themes:
 - Reinforcement learning for reasoning, especially how latent signals can provide useful credit beyond outcome rewards and why predictivity alone may not be enough to change a policy.
 - Predictive-state representations and agent memory, especially what must be retained for control and transfer under partial observability.
 - Reliable evaluation under adaptive data collection and changing policies.
-- Model internals and efficient post-training through representation analysis, PEFT, and Fisher geometry.
+- Model internals, deep-learning optimization, and efficient adaptation through representation analysis, Fisher geometry, PEFT, and GPU systems.
 
 ## Selected research
 
@@ -44,7 +44,7 @@ Sole first author of the **[GRIT arXiv preprint](https://arxiv.org/abs/2601.0023
 - Built the framework for LLM adaptation under parameter and forgetting constraints.
 - Implemented fused Triton kernels for covariance fusion, GPU-side Cholesky inversion, and batched preconditioning.
 - Built asynchronous CUDA streams that overlap K-FAC inversions and eigensolves with training across 60+ LoRA modules.
-- Matched LoRA/QLoRA with `25–80%` lower effective rank and exported a `32%` smaller adapter at `<0.04pp` accuracy loss.
+- Matched LoRA/QLoRA with a `26.6–80%` smaller effective active update footprint after Fisher-guided rank selection and exported a `32%` smaller adapter with less than `0.04` percentage points of accuracy loss.
 
 The wider internship also included rebuilding clinical NER evaluation and deterministic QC, reaching `0.640` exact micro-F1 with zero subword fragments across 5,035 rows.
 
