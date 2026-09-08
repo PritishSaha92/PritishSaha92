@@ -1,18 +1,18 @@
 # Pritish Saha
 
-Final-year student at **IIT Kharagpur** working across reinforcement learning and reasoning, predictive-state representations and agent memory, model internals, optimization for efficient adaptation, and reliable evaluation under policy change.
+Final-year student at **IIT Kharagpur** working across reinforcement learning and reasoning, predictive-state representations and agent memory, model internals, experience reuse in off-policy RL, and efficient adaptation.
 
 [Website](https://pritishsaha92.github.io/) / [IIT KGP email](mailto:pritish.saha@kgpian.iitkgp.ac.in) / [Gmail](mailto:pritish171@gmail.com) / [LinkedIn](https://www.linkedin.com/in/pritish-saha-436a1922a/) / [Google Scholar](https://scholar.google.com/citations?user=gmXhzpMAAAAJ&hl=en) / [Hugging Face](https://huggingface.co/Pritish92) / [CV](https://pritishsaha92.github.io/data/Pritish_CV.pdf)
 
 ## Research interests
 
-Most of my work asks what a model has actually learned when it succeeds, what its data can really tell us, and how both hold up when the objective or policy changes.
+Most of my work asks what a model has actually learned when it succeeds, what information it retains, and how that structure can support better learning and decisions.
 
 Current themes:
 
 - Reinforcement learning for reasoning, especially how latent signals can provide useful credit beyond outcome rewards and why predictivity alone may not be enough to change a policy.
 - Predictive-state representations and agent memory, especially what must be retained for control and transfer under partial observability.
-- Reliable evaluation under adaptive data collection and changing policies.
+- Efficient learning from experience: how off-policy agents can reuse stored data as their policies improve, particularly when interaction or training is expensive.
 - Model internals, deep-learning optimization, and efficient adaptation through representation analysis, Fisher geometry, PEFT, and GPU systems.
 
 ## Selected research
