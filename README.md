@@ -70,6 +70,7 @@ As a Data Science Intern in the **Axis Bank Business Intelligence Unit** (May–
 [Final presentation](https://drive.google.com/file/d/1sOSdI06d-h-Mi6OKhAklsaRF8sPu17tN/view?usp=sharing)
 
 - **General Championship Data Analytics, IIT Kharagpur — 3rd Place:** led a GenAI analytics dashboard for Frammer AI with LangGraph, self-healing SQL, NLQ-driven KPI analysis, and synthetic star-schema evaluation. [Presentation](https://drive.google.com/file/d/1VRiHxlmjm4wJ9ezu4tE9BwB5iGUvbngH/view?usp=sharing)
+- **DRISHTI · Inter IIT Tech Meet 14.0:** co-designed an ISRO GeoNLI system for IIT Kharagpur's Overall Champions contingent, combining staged Qwen3-VL-8B LoRA SFT and DPO with SAM3-based grounding across RGB, SAR, and infrared imagery. [Report](https://drive.google.com/file/d/1wV529gO1rOvvg5_gR5nNmlEWt_f33v0g/view?usp=sharing)
 - **[Amazon ML Challenge 2025](https://github.com/PritishSaha92/Amazon-ML-25):** stacked Qwen2.5-VL-3B SFT with LightGBM over CLIP and text features; used WebDataset, 4-bit QLoRA, Pseudo-Huber loss, and monotonic constraints; reached `40.8` SMAPE.
 - **[American Express Campus Challenge](https://github.com/PritishSaha92/AmEX-Spacebar-Sketchers-2025) — National Finalist:** built a three-stage GBDT-Transformer ranking ensemble with `3k+` leakage-free temporal features and a listwise Transformer trained on GBDT residuals; final MAP `0.59`.
 
