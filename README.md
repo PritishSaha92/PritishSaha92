@@ -41,6 +41,8 @@ My BTP at the **Complex Networks Research Group (CNeRG), IIT Kharagpur**, superv
 
 First author of the **[GRIT arXiv preprint](https://arxiv.org/abs/2601.00231)**, developed at **RAAPID INC** with Prof. Amitava Das. GRIT treats adapter updates as a geometric object using rank-space K-FAC, Fisher-guided reprojection, dynamic rank adaptation, and guarded high-rank-to-low-rank compression.
 
+[RAAPID research article](https://www.raapidinc.com/labs/grit-geometry-aware-peft-kfac-fisher-rank-adaptation/) / [Patent](https://www.raapidinc.com/labs/geometric-reprojection-instruction-tuning-language-model/)
+
 - Built the framework for LLM adaptation under parameter and forgetting constraints.
 - Implemented fused Triton kernels for covariance fusion, GPU-side Cholesky inversion, and batched preconditioning.
 - Built asynchronous CUDA streams that overlap K-FAC inversions and eigensolves with training across 60+ LoRA modules.
