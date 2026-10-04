@@ -6,13 +6,13 @@ I'm a final-year dual-degree student at **IIT Kharagpur**, working on reinforcem
 
 ## Research
 
-I'm interested in what agents learn to remember, how they use that memory to make decisions, and whether it stays useful as tasks change. I study whether a model's hidden states can provide useful learning signals for reasoning. I'm also interested in how problem structure can help RL agents learn to coordinate decisions with limited training.
+I'm interested in what agents learn to remember and whether that memory stays useful as tasks change. I study whether a model's hidden states can help it learn to reason. I'm also interested in how RL agents use problem structure to coordinate decisions with limited data, and how uncertainty in their value estimates should affect those decisions.
 
-- **LaViDA:** My bachelor's thesis at IIT Kharagpur studies learning signals for mathematical reasoning beyond final-answer rewards. I'm preparing the paper. [Research overview](https://pritishsaha92.github.io/#/research#lavida)
-- **MARS:** At the Cambridge AI Safety Hub, I study how sequence models represent partly observed environments, using exact Bayesian beliefs as a reference. [Research overview](https://pritishsaha92.github.io/#/research#predictive-state)
+- **[LaViDA](https://pritishsaha92.github.io/#/research#lavida):** My bachelor's thesis at IIT Kharagpur studies learning signals for mathematical reasoning beyond final-answer rewards.
+- **[MARS](https://pritishsaha92.github.io/#/research#predictive-state):** At the Cambridge AI Safety Hub, I study how sequence models represent partly observed environments, using exact Bayesian beliefs as a reference.
 - **[Mixture of Chapters](https://arxiv.org/abs/2603.21096):** Sparse access to a large learned memory bank in transformers. Co-author; ICLR 2026 New Frontiers in Associative Memory Workshop.
 - **[GRIT](https://arxiv.org/abs/2601.00231):** Geometry-aware fine-tuning with low-rank adapters, developed at RAAPID INC. First-author preprint.
 
 I've also worked on clinical NLP at RAAPID INC and transaction graphs for fraud review at Axis Bank.
 
-I'm graduating in **May 2027** and looking for full-time roles in machine learning research and engineering. You can reach me at [pritish171@gmail.com](mailto:pritish171@gmail.com).
+I'm graduating in **May 2027** and looking for full-time roles in machine learning research and engineering.
