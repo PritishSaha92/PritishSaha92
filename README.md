@@ -6,7 +6,7 @@ I'm a final-year dual-degree student at **IIT Kharagpur**, working on reinforcem
 
 ## Research
 
-I'm interested in what agents learn to remember and whether that memory stays useful as tasks change. I study whether a model's hidden states can help it learn to reason. I'm also interested in how RL agents use problem structure to coordinate decisions with limited data, and how uncertainty in their value estimates should affect those decisions.
+I'm interested in what agents learn to remember and whether that memory stays useful as tasks change. I study whether a model's hidden states can help it learn to reason, and how guidance affects its answers. I'm also interested in how RL agents use problem structure to coordinate decisions with limited data, and how uncertainty in their value estimates should affect those decisions.
 
 - **[LaViDA](https://pritishsaha92.github.io/#/research#lavida):** My bachelor's thesis at IIT Kharagpur studies learning signals for mathematical reasoning beyond final-answer rewards.
 - **[MARS](https://pritishsaha92.github.io/#/research#predictive-state):** At the Cambridge AI Safety Hub, I study how sequence models represent partly observed environments, using exact Bayesian beliefs as a reference.
